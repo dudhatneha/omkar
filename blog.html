@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
+
+
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Document</title>
+</head>
+<style>
+    .subtitle {
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin: 0;
+        color: #1792d2;
+        letter-spacing: 0.05em;
+        font-family: 'Ubuntu Bold', sans-serif;
+    }
+
+    .article-title {
+        font-size: 1.5rem;
+    }
+
+    .article-read-more,
+    .article-info {
+        font-size: 14PX;
+    }
+
+    .article-read-more {
+        color: var(--mian-color);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .article-read-more:hover,
+    .article-read-more:focus {
+        color: #143774;
+        text-decoration: underline;
+    }
+
+    .article-info {
+        margin: 2em 0;
+    }
+
+    /* header{
+  padding: 2em 0;
+  text-align: center;
+  background: #f0f8ff;
+  font-family: sans-serif;
+  margin-bottom: 3em;
+} */
+    .container-flex {
+        max-width: 70vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+
+    .widget-title {
+        font-size: 18PX;
+    }
+
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    main {
+        max-width: 75%;
+    }
+
+    .article-body {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .sidebar {
+        max-width: 23%;
+    }
+
+
+    @media (max-width:1050px) {
+        .container-flex {
+            flex-direction: column;
+        }
+
+        .site-title,
+        .subtitle {
+            width: 100%;
+        }
+
+        main {
+            max-width: 100%;
+        }
+
+        .sidebar {
+            max-width: 100%;
+        }
+
+    }
+
+    .sidebar-widget {
+        margin-bottom: 30PX;
+    }
+
+    /* articles */
+    .article-featured {
+        border-bottom: #707070 1px solid;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+    }
+
+    .article-recent {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+
+    .article-recent-main {
+        order: 2;
+    }
+
+    .article-recent-secondary {
+        order: 1;
+    }
+
+    @media (min-width: 675px) {
+        .article-recent {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .article-recent-main {
+            width: 68%;
+        }
+
+        .article-recent-secondary {
+            width: 30%;
+        }
+    }
+</style>
+
+<body>
+
+    <header class="navigation">
+        <div class="container-lg">
+            <div class="brand">
+                <a href="#!"> <img src="images/logo.png" alt=""></a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+
+                <ul class="nav-list">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="aboutus.html">about</a></li>
+                    <li><a href="service.html">Services</a>
+                        <ul class="navbar-dropdown">
+                            <li><a href="hardware.html">Hardware</a> </li>
+                            <li><a href="#!">Decorative Hardware</a> </li>
+                            <li> <a href="#!">Glass Hardware</a></li>
+                            <li> <a href="#!">Sliding - Folding System</a></li>
+                            <li> <a href="#!">Wardrobe Sliding System</a></li>
+                            <li> <a href="#!">Modular Kitchen</a></li>
+                            <li> <a href="#!">Kitchen Accessories </a></li>
+                            <li> <a href="#!">Built-In Home Appliances</a></li>
+                            <li> <a href="#!">Lighting</a></li>
+                            <li><a href="Greenlamlaminate.html">Greenlam laminates</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Projects.html">Projects</a> </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#!">Brands</a>
+                        <ul class="navbar-dropdown">
+                            <div class="d-flex">
+                                <div>
+                                    <ul>
+                                        <li><a href="#!"><strong> Hardware Brands</strong></a></li>
+                                        <li><a href="ditton.html">Ditton</a></li>
+                                        <li><a href="#!">Hafele</a></li>
+                                        <li><a href="#!">Hettich</a></li>
+                                        <li><a href="#!">Enex</a></li>
+                                        <li><a href="#!">Gadry</a></li>
+                                        <li><a href="#!">Tonex</a></li>
+                                        <li><a href="#!">Ozane</a></li>
+                                        <li><a href="#!">Rio</a></li>
+                                        <li><a href="#!">Adara</a></li>
+                                        <li><a href="#!">Hoppey</a></li>
+                                        <li><a href="#!">Inoq</a></li>
+                                        <li><a href="#!">Shreya Hardware</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <ul>
+                                            <li><a href="#!"><strong>Laminate Brands</strong></a></li>
+                                            <li><a href="royaltouch.html">Royal touch</a></li>
+                                            <li><a href="Marine.html">Marine laminate</a></li>
+                                            <li><a href="Century.html">Century laminate</a></li>
+                                            <!-- <li><a href="#!">Greenlam laminates</a></li> -->
+                                            <li><a href="Formica.html">Formica laminates</a></li>
+                                            <li><a href="Arica.html">Arica laminates</a></li>
+                                            <li><a href="Advance.html">Advance laminates</a></li>
+                                            <li><a href="Fine.html">Fine touch</a></li>
+                                            <li><a href="royal-crown .html">Royal crown laminates</a></li>
+                                            <li><a href="delta.html">Delta laminates</a></li>
+                                            <li><a href="Sundek.html">Sundek laminates </a></li>
+                                            <li><a href="Amulya.html">Amulya laminates</a></li>
+                                            <li><a href="Kridha.html">Kridha laminates</a></li>
+                                            <li><a href="Ventura.html">Ventura laminates</a></li>
+                                            <li><a href="Rang.html">Rang laminates</a></li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="d-none d-lg-block"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="page-img">
+        <ul class="main-icon">
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+        <!-- <img src="./images/home/slider3.jpg" /> -->
+        <div class="row justify-content-center main-page-content p-0 m-0">
+            <div class="col-lg-7">
+                <div class="up-link">
+                    <ul>
+                        <li><a href="index.html">Home / <span>Blog</span></a></li>
+                    </ul>
+                </div>
+                <svg viewBox="0 0 2750 400">
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                        Blog
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <!-- container starts -->
+    <div class="container container-flex">
+        <main role="main">
+            <article class="article-featured">
+                <h2 class="article-title">Finding simplicity in life</h2>
+                <img src="images/home/wallpaper6.png" alt="" class="article-image">
+                <p class="article-info">July 23, 2019 | 3 comments</p>
+                <p class="article-body">Life can get complicated really quickly, but it doesn't have to be! There are
+                    many ways to simplify your life, a few of which we've explored in the past. This week we're taking a
+                    bit of a approach though, in how you can find simplicity in the life you already living.</p>
+                <a href="galley.html" class="article-read-more">CONTINUE READING</a>
+            </article>
+
+            <article class="article-recent">
+                <div class="article-recent-main">
+                    <h2 class="article-title">Plan</h2>
+                    <p class="article-body">Food is a very important part of everyone's life. If you want to be healthy,
+                        you have to eat healthy. One of the easiest ways to do that is to keep your cooking nice and
+                        simple.</p>
+                    <a href="galley.html" class="article-read-more">CONTINUE READING</a>
+                </div>
+                <div class="article-recent-secondary">
+                    <img src="images/home/wall1.png" alt="" class="article-image">
+                    <p class="article-info">July 19, 2019 | 3 comments</p>
+                </div>
+            </article>
+
+            <article class="article-recent">
+                <div class="article-recent-main">
+                    <h2 class="article-title">Simplicity and work </h2>
+                    <p class="article-body">Work is often a major source of stress. People get frustrated, it ruins
+                        their relationship with others and it leads to burnout. By keeping your work life as simple as
+                        possible, it will help balance everything out.</p>
+                    <a href="galley.html" class="article-read-more">CONTINUE READING</a>
+                </div>
+                <div class="article-recent-secondary">
+                    <img src="images/home/wall2.png" alt="" class="article-image">
+                    <p class="article-info">July 12, 2019 | 3 comments</p>
+                </div>
+            </article>
+
+            <article class="article-recent">
+                <div class="article-recent-main">
+                    <h2 class="article-title">Simple decorations</h2>
+                    <p class="article-body">A home isn't a home until you've decorated a little. People either don't
+                        decorate, or they go overboard and it doesn't have the impact they were hoping for. Staying
+                        simple will help draw the eye where you want it to and make things pop like never before.</p>
+                    <a href="galley.html" class="article-read-more">CONTINUE READING</a>
+                </div>
+                <div class="article-recent-secondary">
+                    <img src="images/home/wall3.png" alt="a green plant in a clear, round vase with water in it"
+                        class="article-image">
+                    <p class="article-info">July 3, 2019 | 3 comments</p>
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+
+
+
+            <div class="sidebar-widget ps-3">
+                <h2 class="widget-title">RECENT POSTS</h2>
+                <div class="widget-recent-post">
+                    <!-- <h3 class="widget-recent-post-title">Plan</h3> -->
+                    <img src="images/home/wallpaper11.png" alt="" class="widget-image">
+                    <p class="article-body">Staying simple will help draw the eye where you want it to and make things.
+                    </p>
+                </div>
+                <div class="widget-recent-post">
+                    <!-- <h3 class="widget-recent-post-title">Simplicity and work</h3> -->
+                    <img src="images/home/wallpaper10.png" alt="" class="widget-image">
+                    <P>A home isn't a home until you've decorated a little..</P>
+                </div>
+                <div class="widget-recent-post">
+                    <!-- <h3 class="widget-recent-post-title">Simple decorations</h3> -->
+                    <img src="images/home/wallpaper9.png" alt="" class="widget-image">
+                    <p class="article-body">Staying simple will help draw the eye where you want it to and make things.
+                    </p>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    <section class="contact-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <form action="">
+                        <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""
+                            required>
+                        <input type="text" class="form-control" id="name" placeholder="EMAIL" name="Email" value=""
+                            required>
+                        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"
+                            required></textarea>
+                        <button class="button my-5">
+                            Send
+                            <div class="button__horizontal"></div>
+                            <div class="button__vertical"></div>
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-5">
+                    <div class="header-section">
+                        <h2 class="title text-dark">Contact <span class="text-white">Us</span></h2>
+                        <p class="description text-dark">There are many variations of passages of Lorem Ipsum available,
+                            but the
+                            majority have suffered alteration in some form, by injected humour, or randomised words
+                            which don’t look even slightly believable</p>
+                        <ul class="form-upicon">
+                            <li><a href=""><i class="fa-solid fa-location-dot"></i><span><strong>GROUND, 2 PAIKI PLOT,
+                                            116,</strong>Udhana - Magdalla Rd, Bhatar Char Rasta, Gandhi Kutir,
+                                        Surat,Gujarat 395007</span></a></li>
+                            <li><a href="" class="d-flex"><i class="fa-solid fa-phone"></i>
+                                    <div class="">
+                                        <span class="d-block">+91 8252812534</span>
+                                        <span>+91 9023828898</span>
+                                    </div>
+                                </a></li>
+                            <li><a href=""><i class="fa-solid fa-envelope"></i><span>omkarinteri91@gmail.com</span></a>
+                            </li>
+                        </ul>
+                        <div class="form-icon">
+                            <ul class="icon d-flex">
+                                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta d-flex">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span><strong>GROUND, 2 PAIKI PLOT, 116,</strong>Udhana - Magdalla Rd, Bhatar Char
+                                    Rasta, Gandhi Kutir, Surat,Gujarat 395007</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>+91 8252812534</span>
+                                <span>+91 9023828898</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>omkarinteri91@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"> <img src="./images/home/logo.png" alt="" class=""
+                                        width="80px"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor
+                                    incididuntut consec tetur adipisicing
+                                    elit,Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="Projects.html">Projrcts</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="#!">Brands</a></li>
+                                <li><a href="contact.html">Contact us</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2023, All Right Reserved <a
+                                    href="https://brightensolutions.com/">brighten.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="privacy.html">Privacy</a></li>
+                                <li><a href="policy.html">Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+        $(document).ready(function () {
+
+            $('#itemslider').carousel({ interval: 3000 });
+
+            $('.carousel-showmanymoveone .item').each(function () {
+                var itemToClone = $(this);
+
+                for (var i = 1; i < 6; i++) {
+                    itemToClone = itemToClone.next();
+
+                    if (!itemToClone.length) {
+                        itemToClone = $(this).siblings(':first');
+                    }
+
+                    itemToClone.children(':first-child').clone()
+                        .addClass("cloneditem-" + (i))
+                        .appendTo($(this));
+                }
+            });
+        });
+
+    </script>
+    <!-- <script>
+        window.onscroll = () => {
+            const nav = document.querySelector('#navbar');
+            if (this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
+        };
+    </script> -->
+
+    <script src="js/style.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
